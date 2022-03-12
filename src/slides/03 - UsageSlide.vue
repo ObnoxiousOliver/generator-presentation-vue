@@ -1,14 +1,16 @@
 <template>
   <div class="root">
-    <h1>
-      <transition name="header">
-        <span v-if="state === 0">Fahrrad Dynamo</span>
-        <span v-else-if="state === 1">Wasserkraftwerk</span>
-        <span v-else-if="state === 2">Kohlekraftwerk</span>
-        <span v-else-if="state === 3">Windkraftwerk</span>
-        <span v-else-if="state === 4">Kernkraftwerk</span>
-      </transition>
-    </h1>
+    <div class="glow">
+      <h1>
+        <transition name="header">
+          <span v-if="state === 0">Fahrrad Dynamo</span>
+          <span v-else-if="state === 1">Wasserkraftwerk</span>
+          <span v-else-if="state === 2">Kohlekraftwerk</span>
+          <span v-else-if="state === 3">Windkraftwerk</span>
+          <span v-else-if="state === 4">Kernkraftwerk</span>
+        </transition>
+      </h1>
+    </div>
     <div class="container bg">
       <img src="../assets/fahrraddynamo-an-bereifung.jpg">
       <img src="../assets/wasserkraftwerk.jpg">
@@ -41,6 +43,10 @@ export default {
 .root {
   background: black;
   color: white;
+}
+
+.glow {
+  filter: drop-shadow(#fff6 0 0 20px);
 }
 
 .slide {

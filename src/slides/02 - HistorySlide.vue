@@ -6,22 +6,26 @@
     <img class="img2" src="../assets/Antoine-Hippolyte_Pixii.jpg">
     <h3>Antoine-Hippolyte Pixii</h3>
 
-    <transition name="state-0">
-      <span v-if="state === 0">
-        <h1>Antoine-<br>Hippolyte Pixii</h1>
-        <h2>*1808 &nbsp; †1835</h2>
-      </span>
-    </transition>
-
-    <transition name="state-1">
-      <span v-if="state === 1">
-        <img class="img3" src="..\assets\erste-magnetoelectric-motor-gebaut-von-hippolyte-pixii-c-1832-c-1890-artist-unbekannt-aja0g5.jpg.png">
-        <span class="first-gen">
-          Der Erste<br>
-          <span class="gen">Generator</span>
+    <div class="glow">
+      <transition name="state-0">
+        <span v-if="state === 0">
+          <h1>Antoine-<br>Hippolyte Pixii</h1>
+          <h2>*1808 &nbsp; †1835</h2>
         </span>
-      </span>
-    </transition>
+      </transition>
+    </div>
+
+      <transition name="state-1">
+        <span v-if="state === 1">
+          <img class="img3" src="..\assets\erste-magnetoelectric-motor-gebaut-von-hippolyte-pixii-c-1832-c-1890-artist-unbekannt-aja0g5.jpg.png">
+          <div class="glow">
+            <span class="first-gen">
+              Der Erste<br>
+              <span class="gen">Generator</span>
+            </span>
+          </div>
+        </span>
+      </transition>
 
     <div class="img1">
       <img src="../assets/Antoine-Hippolyte_Pixii.jpg">
@@ -43,6 +47,10 @@ export default {
 .root {
   background: #000205;
   color: #fff;
+}
+
+.glow {
+  filter: drop-shadow(#fff6 0 0 20px);
 }
 
 .slide {

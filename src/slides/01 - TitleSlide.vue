@@ -2,8 +2,10 @@
   <div>
     <!-- <img src="../assets/gen_inside_render4.png" /> -->
     <video loop autoplay src="../assets/gen_title_idle0001-0060.mp4"></video>
-    <h1>Generator</h1>
-    <h2>Oliver & Mohamed</h2>
+    <div class="glow">
+      <h1>Generator</h1>
+      <h2>Oliver & Mohamed</h2>
+    </div>
   </div>
 </template>
 
@@ -77,5 +79,9 @@ h2 {
   font-weight: normal;
   letter-spacing: 0.545em;
   text-transform: uppercase;
+}
+
+.glow {
+  filter: drop-shadow(#fff6 0 0 20px);
 }
 </style>

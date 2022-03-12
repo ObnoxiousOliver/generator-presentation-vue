@@ -8,6 +8,7 @@
     <img src="./assets/turbines.jpg">
     <img src="./assets/kernkraftwerk.jpg">
     <img src="./assets/gen_closed.png">
+    <img src="./assets/sine_wave.svg">
   </div>
   <SlideViewer
     v-if="allAssetsLoaded"
@@ -37,10 +38,13 @@ export default {
 
     watch(slide, () => {
       slide.value = Math.max(0, Math.min(slide.value, maxSlide))
+      localStorage.setItem('slide', slide.value)
     })
 
     onMounted(() => {
       const totalImg = document.querySelectorAll('img').length
+
+      slide.value = localStorage.getItem('slide') ?? 0
 
       let loadedImg = 0
 
