@@ -33,7 +33,7 @@ export default {
 
   setup () {
     const slide = ref(0)
-    const maxSlide = 30
+    const maxSlide = 23
     const allAssetsLoaded = ref(false)
 
     watch(slide, () => {
