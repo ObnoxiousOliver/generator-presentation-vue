@@ -51,6 +51,9 @@ import WhatCurrentSlide from '../slides/04 - WhatCurrentSlide.vue'
 import GenConstructionSlide from '../slides/05 - GenConstructionSlide.vue'
 import GenInsideSimpleSlide from '../slides/06 - GenInsideSimpleSlide.vue'
 import GenSimpleAloneSlide from '../slides/07 - GenSimpleAloneSlide.vue'
+import TurbineOpenSlide from '../slides/08 - TurbineOpenSlide.vue'
+import TubineCloseupSlide from '../slides/09 - TubineCloseupSlide.vue'
+import EndSlide from '../slides/10 - EndSlide.vue'
 
 export default {
   props: {
@@ -67,7 +70,10 @@ export default {
       { r: [9, 10, 11], c: WhatCurrentSlide },
       { r: [12], c: GenConstructionSlide },
       { r: [13], c: GenInsideSimpleSlide },
-      { r: [14, 15, 16, 17], c: GenSimpleAloneSlide }
+      { r: [14, 15, 16, 17, 18], c: GenSimpleAloneSlide },
+      { r: [19, 20], c: TurbineOpenSlide },
+      { r: [21, 22], c: TubineCloseupSlide },
+      { r: [23], c: EndSlide }
     ]
 
     const slideEl = computed(() => slides.find(x => x.r.includes(props.slide)))
